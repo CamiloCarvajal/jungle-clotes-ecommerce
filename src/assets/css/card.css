@@ -1,0 +1,39 @@
+.product-list {
+    /* 
+    width: 100%;
+    display: inline-block; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+}
+
+.card-product {
+    padding: 5px;
+    height: 350px;
+    width: 200px;
+    margin: 2px;
+    border: 2px;
+    border-color: #156660;
+    border-style: solid;
+    border-radius: 10px;
+
+
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-product img {
+    height: 140px;
+    width: 150px;
+}
+
+.card-product .card-title {
+    color: #156660;
+    height: 120px;
+    text-align: center;
+}

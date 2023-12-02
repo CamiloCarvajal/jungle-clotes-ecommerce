@@ -1,6 +1,8 @@
+import "./assets/css/card.css"
 import "./assets/css/templates.css"
-import Landing from "./components/pages/Landing";
 
+
+import Landing from "./components/pages/Landing";
 import Header from './components/template/Header';
 
 function App() {
