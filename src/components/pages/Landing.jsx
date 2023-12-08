@@ -11,9 +11,10 @@ export default function Landing() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [productDetail, setProductDetail] = useState([]);
+    const [searchFilter, setSearchFilter] = useState("");
 
     const endpointAllProducts = 'https://fakestoreapi.com/products?limit=50';
-    const endpointCategories  = "https://fakestoreapi.com/products/categories";
+    const endpointCategories = "https://fakestoreapi.com/products/categories";
 
 
     useEffect(() => {
@@ -30,9 +31,9 @@ export default function Landing() {
 
     return (
         <>
-            <Header categoriesList={categories}/>
+            <Header categoriesList={categories} filter={setSearchFilter} />
             <a href="volver" onClick={console.log("return")}> {"< Regresar"} </a>
-                <ProductList products={products}/>
+            <ProductList products={products} />
             <Footer />
         </>
     )
