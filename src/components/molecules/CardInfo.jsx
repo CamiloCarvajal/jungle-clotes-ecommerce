@@ -9,11 +9,13 @@ export default function CardInfo({product}) {
     return (
         <div className="card-info">
             <CardImage name={product.title} url={product.image}/>
-            <CardTitle title={product.title}/>
-            <div className="product-info">
-                {/* <p>{product.description}</p> */}
-                <p>{product.price}</p>
-                <p>Calificación: <span>{rate}</span></p>
+            <div className="card-info-container">
+                <CardTitle title={product.title}/>
+                <div className="product-info">
+                    {/* <p>{product.description}</p> */}
+                    <p>${product.price}</p>
+                    <p>Calificación: <span>{rate}</span></p>
+                </div>
             </div>
 
         </div>

@@ -4,35 +4,35 @@
 import { useEffect, useState } from "react";
 import Footer from "../template/Footer";
 import Header from "../template/Header";
-import Card from "../organisms/Card";
+import ProductList from "../template/ProductList";
 
 export default function Landing() {
 
     const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [productDetail, setProductDetail] = useState([]);
 
-    const allProducts = 'https://fakestoreapi.com/products'
+    const endpointAllProducts = 'https://fakestoreapi.com/products?limit=50';
+    const endpointCategories  = "https://fakestoreapi.com/products/categories";
 
 
     useEffect(() => {
-        fetch(allProducts)
+        fetch(endpointAllProducts)
             .then(res => res.json())
             .then(list => setProducts(list))
+
+        fetch(endpointCategories)
+            .then(res => res.json())
+            .then(categoriesList => setCategories(categoriesList))
 
     }, [])
 
 
     return (
         <>
-            <Header />
+            <Header categoriesList={categories}/>
             <a href="volver" onClick={console.log("return")}> {"< Regresar"} </a>
-            <div className="product-list">
-            {
-                products.map((item, idx) => {
-                    return <Card product={item} />
-                })
-            }
-            </div>
+                <ProductList products={products}/>
             <Footer />
         </>
     )

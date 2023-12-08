@@ -1,26 +1,14 @@
 import Categories from "../organisms/Categories";
 import ToolsBar from "../organisms/ToolsBar";
 
-export default function Header() {
+export default function Header({categoriesList}) {
 
-    const categoriesList = [
-        "Camisas",
-        "Pantalones",
-        "Zapatos",
-        "Gorras"
-    ]
+    console.log(categoriesList)
 
     return (
         <div className="header">
             <ToolsBar />
-            <Categories categoriesList={
-                [
-                    "Camisas",
-                    "Pantalones",
-                    "Zapatos",
-                    "Gorras"
-                ]
-            }/>
+            <Categories categoriesList={categoriesList}/>
         </div>
     )
 

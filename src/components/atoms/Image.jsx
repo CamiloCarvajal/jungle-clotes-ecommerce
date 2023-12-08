@@ -3,7 +3,7 @@ function Image({ uri }) {
     return (
         <img
             className="image"
-            alt="JungleClothes"
+            alt={uri}
             src={require(`../../assets/images/${uri}`)}
         />
     )
