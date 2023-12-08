@@ -64,13 +64,17 @@
 
 .search-bar img {
 	cursor: pointer;
+	height: 100%;
 }
 
-.logo>img {
+.logo img {
 	height: 70px;
 }
 
-
+.search-button {
+	width: 32px;
+	height: 32px;
+}
 
 /*  Footer  */
 

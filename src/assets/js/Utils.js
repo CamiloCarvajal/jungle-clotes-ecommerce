@@ -1,8 +1,9 @@
 
 export function getProductByName(name, listProduct) {
 
-    return listProduct.filter((product) =>
-        product.title.contains(name)
+    let lista =  listProduct.filter((product) =>
+        product.title.includes(name)
     )
 
+    return lista
 }

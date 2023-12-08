@@ -31,8 +31,14 @@ export default function Landing() {
 
     return (
         <>
-            <Header categoriesList={categories} filter={setSearchFilter} />
-            <a href="volver" onClick={console.log("return")}> {"< Regresar"} </a>
+            <Header
+                categoriesList={categories}
+                filter={setSearchFilter}
+                filterValue={searchFilter}
+                productList={products}
+                newProductList={setProducts}
+            />
+            <a href="/"> {"< Ver todos los productos"} </a>
             <ProductList products={products} />
             <Footer />
         </>
