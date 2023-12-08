@@ -1,5 +1,9 @@
 /*  Header  */
 
+.header {
+	margin-bottom: 20px;
+}
+
 .tools-bar {
 	padding: 5px;
 	display: flex;
@@ -33,7 +37,7 @@
 	/* background-color:; */
 }
 
-.cart>img {
+.cart img {
 	height: 35px;
 	cursor: pointer;
 }
@@ -96,4 +100,10 @@
 	/* justify-content: center; */
 	text-align: center;
 	margin: 8px 0px;
+}
+
+a.home-ref {
+	color: #0e413d;
+	margin: 20px;
+	font-weight: 600;
 }

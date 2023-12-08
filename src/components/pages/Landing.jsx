@@ -38,7 +38,7 @@ export default function Landing() {
                 productList={products}
                 newProductList={setProducts}
             />
-            <a href="/"> {"< Ver todos los productos"} </a>
+            <a className="home-ref" href="/"> {"< Ver todos los productos"} </a>
             <ProductList products={products} />
             <Footer />
         </>
